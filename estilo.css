@@ -72,4 +72,11 @@ body {
 
 .acerto {
     width: 80%;
+    text-align: center;
+}
+
+.erro {
+    width: 80%;
+    height: 50vh;
+    text-align: center;
 }
