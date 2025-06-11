@@ -71,12 +71,13 @@ body {
 }
 
 .acerto {
-    width: 80%;
-    text-align: center;
+    width: 50%;
+    height: 100vh;
+    text-align: center
 }
 
-.erro {
+.errado {
     width: 80%;
-    height: 50vh;
+    height: 100vh;
     text-align: center;
 }
