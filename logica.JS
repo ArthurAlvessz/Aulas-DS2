@@ -89,21 +89,14 @@ function iniciarJogo() {
 }
 
 function mostrarPergunta() {
-    objPergunta = listaPerguntas[0]
+    objPergunta = listaPerguntas[0]; 
 
-    textoPergunta = document.createTextNode(objPergunta.pergunta);
+    divPergunta.textContent = objPergunta.pergunta;
 
-    divPergunta.appendChild(textoPergunta);
-
-    txtOpcao1 = document.createTextNode(objPergunta.opcoes[0]);
-    txtOpcao2 = document.createTextNode(objPergunta.opcoes[1]);
-    txtOpcao3 = document.createTextNode(objPergunta.opcoes[2]);
-    txtOpcao4 = document.createTextNode(objPergunta.opcoes[3]);
-    
-    botao0.appendChild(txtOpcao1);
-    botao1.appendChild(txtOpcao2);
-    botao2.appendChild(txtOpcao3);
-    botao3.appendChild(txtOpcao4);
+    botao0.textContent = objPergunta.opcoes[0];
+    botao1.textContent = objPergunta.opcoes[1];
+    botao2.textContent = objPergunta.opcoes[2];
+    botao3.textContent = objPergunta.opcoes[3];
 }
 
 function mostrarTelaAcerto() {
