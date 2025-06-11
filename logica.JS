@@ -29,25 +29,25 @@ listaPerguntas = [
     ],
     correta: 1    
 }
-]
+];
 
-objPergunta = null
+objPergunta = null;
 
-telaInicial = document.querySelector(".tela-inicial")
-telaPergunta = document.querySelector(".tela-pergunta")
+telaInicial = document.querySelector(".tela-inicial");
+telaPergunta = document.querySelector(".tela-pergunta");
 
-telaAcerto = document.querySelector(".tela-acerto")
-telaErro = document.querySelector(".tela-erro")
+telaAcerto = document.querySelector(".tela-acerto");
+telaErro = document.querySelector(".tela-erro");
 
-botaoIniciar = document.querySelector(".iniciar")
-botaoIniciar.addEventListener("click", iniciarJogo)
+botaoIniciar = document.querySelector(".iniciar");
+botaoIniciar.addEventListener("click", iniciarJogo);
 
 divPergunta = document.querySelector(".pergunta");
 
-botao0 = document.querySelector(".opcao0")
-botao1 = document.querySelector(".opcao1")
-botao2 = document.querySelector(".opcao2")
-botao3 = document.querySelector(".opcao3")
+botao0 = document.querySelector(".opcao0");
+botao1 = document.querySelector(".opcao1");
+botao2 = document.querySelector(".opcao2");
+botao3 = document.querySelector(".opcao3");
 
 let indicePergunta = 0;
 
