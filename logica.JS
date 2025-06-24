@@ -50,13 +50,16 @@ botao2 = document.querySelector(".opcao2");
 botao3 = document.querySelector(".opcao3");
 
 let indicePergunta = 0;
+let acertos = 0;
 
 function iniciarJogo() {
     indicePergunta = 0;
+    acertos = 0;
     telaInicial.style.display = "none";
     telaPergunta.style.display = "block";
     telaAcerto.style.display = "none";
     telaErro.style.display = "none";
+    document.querySelector(".tela-venceu").style.display = "none";
     mostrarPergunta();
 }
 
@@ -76,8 +79,12 @@ telaAcerto.addEventListener("click", () => {
         telaPergunta.style.display = "block";
         mostrarPergunta();
     } else {
-        telaInicial.style.display = "block";
-        telaPergunta.style.display = "none";
+        if (acertos === listaPerguntas.length) {
+            document.querySelector(".tela-venceu").style.display = "flex";
+        } else {
+            telaInicial.style.display = "block";
+            telaPergunta.style.display = "none";
+        }
     }
 });
 
@@ -94,28 +101,40 @@ telaErro.addEventListener("click", () => {
 });
 
 botao0.addEventListener("click", () => {
-    if (objPergunta.correta == 0) { mostrarTelaAcerto() 
-    } else { 
-        mostrarTelaErro() }
-});  
+    if (objPergunta.correta == 0) {
+        acertos++;
+        mostrarTelaAcerto();
+    } else {
+        mostrarTelaErro();
+    }
+});
 
 botao1.addEventListener("click", () => {
-    if (objPergunta.correta == 1) { mostrarTelaAcerto() 
-    } else { 
-        mostrarTelaErro() }
-});  
+    if (objPergunta.correta == 1) {
+        acertos++;
+        mostrarTelaAcerto();
+    } else {
+        mostrarTelaErro();
+    }
+});
 
 botao2.addEventListener("click", () => {
-    if (objPergunta.correta == 2) { mostrarTelaAcerto() 
-    } else { 
-        mostrarTelaErro() }
-});  
+    if (objPergunta.correta == 2) {
+        acertos++;
+        mostrarTelaAcerto();
+    } else {
+        mostrarTelaErro();
+    }
+});
 
 botao3.addEventListener("click", () => {
-    if (objPergunta.correta == 3) { mostrarTelaAcerto() 
-    } else { 
-        mostrarTelaErro() }
-}); 
+    if (objPergunta.correta == 3) {
+        acertos++;
+        mostrarTelaAcerto();
+    } else {
+        mostrarTelaErro();
+    }
+});
 
 function mostrarTelaAcerto() {
     telaPergunta.style.display = "none";
@@ -126,3 +145,6 @@ function mostrarTelaErro() {
     telaPergunta.style.display = "none";
     telaErro.style.display = "block";
 }
+
+// Botão "JOGAR NOVAMENTE" na tela de venceu
+document.querySelector(".tela-venceu .iniciar").addEventListener("click", iniciarJogo);

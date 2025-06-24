@@ -81,3 +81,27 @@ body {
     height: 100vh;
     text-align: center;
 }
+
+.tela-venceu {
+    width: 100vw;
+    height: 100vh;
+    background: whitesmoke;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.trofeu {
+    width: 40vw;
+    max-width: 300px;
+    margin-bottom: 30px;
+}
+
+.venceu-msg {
+    font-size: 2em;
+    color: green;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
